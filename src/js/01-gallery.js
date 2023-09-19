@@ -19,3 +19,7 @@ galleryItems.forEach((galleryItem) => {
 gallery.insertAdjacentHTML('afterbegin', list.join(''));
 
 console.log(galleryItems);
+
+gallery.addEventListener('click', (event) => {
+    event.preventDefault();
+})
