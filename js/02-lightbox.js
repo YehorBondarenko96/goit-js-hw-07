@@ -24,4 +24,4 @@ const options = {
     captionDelay: 250,
     close: false, 
 };
-var lightbox = new SimpleLightbox('.gallery a',  options );
+const lightbox = new SimpleLightbox('.gallery a',  options );
