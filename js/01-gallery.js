@@ -31,13 +31,18 @@ gallery.addEventListener('click', (event) => {
     <img src="${urlBig}" width="800" height="600">
 `)
 
-    instance.show();
-
-    document.addEventListener('keydown', (event) => {
+    const closeEsc = (event) => {
     if (event.key === 'Escape' && instance) {
         instance.close();
     };
-});
+}
+    
+    instance.show(
+        document.addEventListener('keydown', closeEsc)
+    );
+
+    instance.element().addEventListener('lightbox-close', () => { document.removeEventListener('keydown', closeEsc) });
+
 });
 
 
